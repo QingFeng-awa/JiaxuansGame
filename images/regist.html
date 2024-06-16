@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>【注册】 帅比游戏</title>
+
+    <link rel="stylesheet" href="css/regist.css">
+    <link rel="shortcut icon" href="images/camera.ico">
+    <script type="text/javascript" src="js/regist.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <style type="text/css">
+<!--
+.STYLE1 {
+	color: #0000FF;
+	font-size: x-large;
+}
+-->
+    </style>
+    <script type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+<body onLoad="MM_preloadImages('fanhui2.png')">
+<!--头部-->
+<div id="reg_header">
+    <div class="reg_h_center">
+        <div class="reg_h_left"><a href='login.html' onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','fanhui2.png',1)"><img src="fanhui1.png" name="Image1" width="170" height="80" border="0"></a>
+          <h3 align="center" class="STYLE1">【注册】 帅比游戏</h3>
+      </div>
+  </div>
+</div>
+
+
+<div align="center">
+  <!--表单内容-->
+</div>
+<div class="reg_back">
+    <div class="reg_left">
+        <p align="center">新用户注册</p>
+        <p align="center">USER REGISTER</p>
+    </div>
+
+<!--    表单列表-->
+    <div class="reg_center">
+        <div class="reg_form">
+            <form action="#" method="post" id="form">
+                <table align="center">
+              <tr>
+                        <td class="td_left"><label for="username">用户名</label></td>
+                        <td class="td_right"><input type="text" name="username" placeholder="请输入用户名"
+                                                    id="username">
+                            <span id="s_username" class="error"></span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="td_left"><label for="password">密码</label></td>
+                        <td class="td_right"><input type="password" name="password" placeholder="请输入密码(请设置6-12位字符)"
+                                                    id="password">
+                            <span id="s_password" class="error"></span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="td_left"><label for="repassword">确认密码</label></td>
+                        <td class="td_right"><input type="password" name="repassword" placeholder="请输入密码"
+                                                    id="repassword">
+                            <span id="s_repassword" class="error"></span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="td_left"><label for="email">Email</label></td>
+                        <td class="td_right"><input type="email" name="email" placeholder="请输入Email" id="Email">
+                            <span id="s_email" class="error"></span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="td_left"><label for="rename">姓名</label></td>
+                        <td class="td_right"><input type="text" name="rename" placeholder="请输入真实姓名" id="rename">
+
+                            <span id="s_rename" class="error"></span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="td_left"><label for="Telphone">手机号</label></td>
+                        <td class="td_right"><input type="text" name="telphone" placeholder="请输入您的手机号"
+                                                    id="Telphone">
+                            <span id="s_telphone" class="error"></span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="td_left"><label>性别</label></td>
+                        <td class="td_right"><input type="radio" name="gender" value="male" checked> 男
+                            <input type="radio" name="gender" value="female"> 女
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td class="td_left"><label for="Birthday">生日(选填)</label></td>
+                        <td class="td_right"><input type="date" name="birthday" id="Birthday"></td>
+                    </tr>
+
+                 
+
+
+                </table>
+
+          <tr>
+                    <td colspan="2" align="center">
+                        <div align="center"><a href='nibeipianle.html'>
+                          <button type="button" value="注册" id="btn_sub" onClick="submitForm()">注册</button>
+                          </a>
+                          
+                        </div></td>
+
+                    <td colspan="2" align="center">
+                        <div align="center">
+                          <button id="reset" value="重置" >重置</button>
+            </div></td>
+              </tr>
+            </form>
+        </div>
+    </div>
+
+    <div class="reg_right">
+        <p>已有账号?<a href="login.html">立即登录</a></p>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="js/regist.js"></script>
+</body>
+</html>

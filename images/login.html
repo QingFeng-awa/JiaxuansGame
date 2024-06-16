@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>【登录】 帅比游戏</title>
+	    <style type="text/css">
+<!--
+.STYLE7 {font-size: xx-large}
+.STYLE8 {
+	color: #0000FF;
+	font-size: xx-large;
+}
+.STYLE9 {font-size: large}
+-->
+        </style>
+        <script type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+<body onLoad="MM_preloadImages('fanhui2.png')">
+<table width="76%" height="283" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="171"><h2><a href='../index.html'><a href='../index.html' onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','fanhui2.png',1)"><img src="fanhui1.png" name="Image1" width="170" height="80" border="0"></a></td>
+    <td width="418"><div align="center" class="STYLE7"><span class="STYLE8">【登录】帅比游戏</span></div></td>
+    <td width="8" class="STYLE7"><div align="left"></div></td>
+    <td width="338" class="STYLE7">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="45" class="STYLE7">&nbsp;</td>
+    <td class="STYLE7"><p align="center" class="STYLE9">用户名:
+          <input type="text" placeholder="请输入用户名..." id="username">
+    </p>
+      <p align="center" class="STYLE9"> 密码:
+          <input type="password" placeholder="请输入密码..." id="passwd">
+      </p>
+    <p align="center">&nbsp;</p></td>
+    <td class="STYLE7">&nbsp;</td>
+    <td class="STYLE7">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="48" class="STYLE7">&nbsp;</td>
+    <td class="STYLE7"><div align="center">
+      <input type="button" value="登录" onClick="login()">
+      <input type="button" id="btnClear" value="清除" onClick="doClear()" />
+    </div></td>
+    <td class="STYLE7">&nbsp;</td>
+    <td class="STYLE7">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="STYLE7">&nbsp;</td>
+    <td>没有账号？<a href="regist.html">立即注册/忘记密码</a></td>
+    <td class="STYLE7">&nbsp;</td>
+    <td class="STYLE7">还是没有账号?<a href=../JXSNB.html>访客登录</a></td>
+  </tr>
+</table>
+
+<span class="STYLE7">
+<from></from>
+</span>
+<from>
+  <div class="STYLE7">
+
+ 
+	<p align="center">&nbsp;</p>
+		<p align="center"><br>
+		</p>
+</div>
+<span class="STYLE7"></span></from>
+<script type="text/javascript">
+			let accountAll = [{ // 存储账户json数据的数组
+					username: '嘉Jiaxuans轩',
+					passwd: 'JXSNB666'
+				},
+				{
+					username: 'HX',
+					passwd: '636216'
+				},
+				{
+					username: 'WYH',
+					passwd: '123456WYH'
+				},
+				{
+					username: 'FQN',
+					passwd: '047418187'
+				},
+								{
+					username: '000',
+					passwd: '000000'
+				}
+			]
+			function login() { //登陆判断
+				let username = document.getElementById('username').value;
+				let passwd = document.getElementById('passwd').value;
+				let account = accountAll.filter(function(e) {
+					return e.username == username
+				})[0]; // 筛选账号返回数组，不存在则返回空数组
+				if (!account) {
+					alert('账户不存在');
+				} else {
+					if (account.username == username && account.passwd == passwd) {
+						alert('登录成功');
+						window.open('../JXSNB.html');
+					} else {
+						alert('密码错误');
+					}
+				}
+			}
+			function doClear() { //获取页面所有的input框，是text和password框，内容=空串
+				let inputs = document.getElementsByTagName("input");
+				for (let i = 0; i < inputs.length; i++) {
+					if (inputs[i].type == 'text' || inputs[i].type == 'password') {
+						inputs[i].value = '';
+					}
+				}
+			}
+			//给清除按钮增加onclick事件
+			let btnClear = document.getElementById('btnClear');
+			btnClear.addEventListener('click', function() {
+				doClear();
+			});
+		</script>
+</body>
+</html>
